@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\grc-copie.props" />
+</Project>

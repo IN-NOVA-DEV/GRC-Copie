@@ -1,11 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net6.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net6.0": []
   },
   "packageFolders": {
     "C:\\Users\\arakotondravao\\.nuget\\packages\\": {},
@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arakotondravao\\Documents\\PROJECT_PRO\\GRC-Copie\\GRC-Copie.csproj",
-      "projectName": "GRC-Copie",
-      "projectPath": "C:\\Users\\arakotondravao\\Documents\\PROJECT_PRO\\GRC-Copie\\GRC-Copie.csproj",
+      "projectUniqueName": "C:\\Users\\arakotondravao\\Documents\\PROJECT_PRO\\grc-copie\\grc-copie.csproj",
+      "projectName": "grc-copie",
+      "projectPath": "C:\\Users\\arakotondravao\\Documents\\PROJECT_PRO\\grc-copie\\grc-copie.csproj",
       "packagesPath": "C:\\Users\\arakotondravao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arakotondravao\\Documents\\PROJECT_PRO\\GRC-Copie\\obj\\",
+      "outputPath": "C:\\Users\\arakotondravao\\Documents\\PROJECT_PRO\\grc-copie\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages"
@@ -29,7 +29,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net7.0"
+        "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -38,8 +38,8 @@
         "https://nuget.devexpress.com/lIAvOQg9Xp91vMJvQucqXSFdHSSdLkOtaDlZSwqTuri8WtjYaN/api": {}
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -50,8 +50,8 @@
       }
     },
     "frameworks": {
-      "net7.0": {
-        "targetAlias": "net7.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "imports": [
           "net461",
           "net462",
