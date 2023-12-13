@@ -7,4 +7,25 @@
     <RootNamespace>grc_copie</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="DevExtreme.AspNet.Data" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Identity.Web" Version="2.16.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\Api\" />
+    <Folder Include="Models\Tools\" />
+  </ItemGroup>
+
 </Project>
