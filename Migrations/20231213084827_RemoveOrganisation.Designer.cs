@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using grc_copie.Data;
 
@@ -11,9 +12,10 @@ using grc_copie.Data;
 namespace grc_copie.Migrations
 {
     [DbContext(typeof(GRC_Context))]
-    partial class GRC_ContextModelSnapshot : ModelSnapshot
+    [Migration("20231213084827_RemoveOrganisation")]
+    partial class RemoveOrganisation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

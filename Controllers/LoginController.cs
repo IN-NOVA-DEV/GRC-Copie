@@ -40,7 +40,7 @@ namespace grc_copie.Controllers
 
                     var identity = new ClaimsIdentity(claims, "JWT");
 
-                    var Organisation = _context.Organisations.ToList();
+                 
                     var Jobs = _context.Jobs.ToList();
 
                     //LoginView logView = new LoginView // A ajuster en fonction de la methode de vue utiliser

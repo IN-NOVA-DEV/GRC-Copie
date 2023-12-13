@@ -11,7 +11,6 @@ namespace grc_copie.Data
         public DbSet<Sexe> Sexes { get; set; }
         public DbSet<Job> Jobs { get; set; }
 
-        public DbSet<Organisation> Organisations { get; set; }
         public DbSet<Resume> Resumes { get; set; }
 
 

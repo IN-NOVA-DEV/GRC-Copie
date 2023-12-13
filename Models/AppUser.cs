@@ -9,6 +9,6 @@
 
         public string Role { get; set; }
 
-        public ICollection<Organisation>? OrganisationListe { get; set; }
+   
     }
 }
