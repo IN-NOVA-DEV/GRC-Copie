@@ -1,9 +1,12 @@
 ﻿using grc_copie.Controllers.Tools;
 using grc_copie.Data;
+using grc_copie.Models;
 using grc_copie.Service;
 using GRC_Copie.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using System.Diagnostics;
 
 namespace GRC_Copie.Controllers
@@ -24,27 +27,25 @@ namespace GRC_Copie.Controllers
             _context = bdd;
             _hs = homeservice;
             _logger = logger;
+
+            
         }
 
-        private IActionResult CheckJobIdAndRedirect()
+       public IActionResult Index()
         {
-            string jobid = JobNameActionFilter.GetJobId(inside);
-
-            if (string.IsNullOrEmpty(jobid))
-                return RedirectToAction("Index", "Login");
-
-            return null; // No redirection is needed
+            return View();  // nom de la vue à mettre 
         }
-        public IActionResult Index()
-        {
 
-            IActionResult redirectResult = CheckJobIdAndRedirect();
-            if (redirectResult != null)
-                return redirectResult;
+        [Authorize(Policy = "Admin")]
+        public ViewResult ListActivity()
+        {
             return View();
         }
-
-        public IActionResult Privacy()
+        public ViewResult Schedule()
+        {
+            return View();
+        }
+        public ViewResult AllSchedule()
         {
             return View();
         }
@@ -54,5 +55,13 @@ namespace GRC_Copie.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        
     }
 }
