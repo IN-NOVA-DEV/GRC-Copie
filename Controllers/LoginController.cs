@@ -40,17 +40,8 @@ namespace grc_copie.Controllers
 
                     var identity = new ClaimsIdentity(claims, "JWT");
 
-                 
-                    var Jobs = _context.Jobs.ToList();
-
-                    //LoginView logView = new LoginView // A ajuster en fonction de la methode de vue utiliser
-                    //{
-                    //    JobsList = Jobs,
-                    //    OrganisationsList = Organisation
-                    //};
-                    ////    HttpContext.Session.SetString("identity", identity.Name);
-                    //return View(logView);
-                    //// Utilisez la valeur du rôle selon vos besoins
+                    //directly return to index after azure Oauth
+                    return RedirectToAction("Index", "Home");
                 }
 
 
