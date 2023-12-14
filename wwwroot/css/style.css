@@ -10,7 +10,7 @@
     list-style: none;
 }
 
-.containera {
+.container{
     display: grid;
     grid-template-columns: 0.2fr 1.5fr;
     grid-template-rows: 0.2fr 2.8fr;
