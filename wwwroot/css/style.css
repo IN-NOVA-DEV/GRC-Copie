@@ -1,0 +1,285 @@
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300&family=Open+Sans&family=Rubik&family=Russo+One&family=Titan+One&family=Ubuntu&family=Work+Sans:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Work Sans';
+    list-style: none;
+}
+
+.containera {
+    display: grid;
+    grid-template-columns: 0.2fr 1.5fr;
+    grid-template-rows: 0.2fr 2.8fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    height: 100vh;
+    grid-template-areas:
+        "Sidebar Topbar"
+        "Sidebar Content"
+        "Sidebar Content";
+}
+
+.Sidebar {
+    grid-area: Sidebar;
+    background-color: #007BD4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 16vw;
+}
+
+    .Sidebar .menu {
+        flex: 1;
+        padding-top: 15px;
+    }
+
+    .Sidebar .ligne {
+        width: 90%;
+        height: 3px;
+        background-color: #ffffff94;
+        position: relative;
+    }
+
+        .Sidebar .ligne span {
+            position: absolute;
+            top: -50%;
+            left: 80%;
+            transform: translate(-50%, -50%);
+            background: #007BD4;
+            padding: 5px;
+            color: #fff;
+        }
+
+    .Sidebar .menu .option a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px;
+        margin: 10px 5px;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+        .Sidebar .menu .option a:hover {
+            background-color: #fff;
+            transition: all 0.4s;
+            color: #000000b0;
+        }
+
+            .Sidebar .menu .option a:hover svg path {
+                fill: #000000b0;
+            }
+
+.Topbar {
+    grid-area: Topbar;
+    background-color: #D9D9D94D;
+    display: flex;
+    align-items: center;
+    padding: 0 45px;
+}
+
+    .Topbar .currentRule {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .Topbar .LoggedUser {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        gap: 5px;
+    }
+
+
+.Content {
+    display: grid;
+    grid-template-columns: 0.4fr 1.3fr 1fr;
+    grid-template-rows: 0.2fr 1.8fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Title Title Title"
+        "Filter Devexpress Devexpress"
+        "Filter Devexpress Devexpress";
+    grid-area: Content;
+    padding: 15px 45px;
+    gap: 20px;
+}
+
+    .Content .Title {
+        display: flex;
+        align-items: center;
+    }
+
+        .Content .Title .textTitle {
+            /* flex: 1; */
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+.Title .textTitle {
+    color: #000000B2;
+}
+
+.add-btn a {
+    background-color: #007BD4;
+    border-radius: 5px;
+    padding: 13px 35px;
+    color: #fff;
+    transition: all 0.4s;
+}
+
+    .add-btn a:hover {
+        transform: scale(1.05);
+        transition: all 0.4s;
+    }
+
+.Content .Title .add-btn {
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+}
+
+.Content .Filter {
+    background: #F4F4F4;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    width: 250px;
+}
+
+    .Content .Filter .header {
+        display: flex;
+        align-items: center;
+    }
+
+    .Content .Filter .text {
+        flex: 1;
+        font-size: 19px;
+    }
+
+.Filter .midle {
+    flex: 1;
+    overflow-y: auto;
+    margin: 10px 0;
+}
+
+.Filter .footer {
+    text-align: center;
+}
+
+    .Filter .footer button {
+        padding: 10px;
+        background-color: #007BD4;
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+        width: 100%;
+    }
+
+        .Filter .footer button:hover {
+            transform: scale(1.01);
+            transition: all 0.4s;
+        }
+
+.Content .Filter .ligne {
+    height: 3px;
+    background-color: #8585854d;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.Title {
+    grid-area: Title;
+}
+
+.Filter {
+    grid-area: Filter;
+}
+
+.Devexpress {
+    grid-area: Devexpress;
+    overflow-y: auto;
+    box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 140px;
+}
+.home .welcome{
+    font-size: 40px;
+    color: rgb(90, 95, 86);
+}
+    .home .Title {
+        font-size: 30px;
+        font-weight: 500;
+        color: #007bd4;
+        padding: 15px 0;
+    }
+    .home .Title2 {
+        margin-bottom: 10px;
+    }
+.cv-management .title,
+.professional-addition .title {
+    font-size: 21px;
+    padding: 10px;
+    background-color: #ebc700;
+    color: #ffffffc0;
+border-radius: 5px;
+margin: 5px 0;
+}
+.cv-management {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.professional-addition {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+    .cv-management ul img,
+    .professional-addition ul img {
+        height: 28px;
+        margin: 10px;
+    }
+
+    .cv-management ul li,
+    .professional-addition ul li {
+        list-style: none;
+    }
+
+    .cv-management ul .list,
+    .professional-addition ul .list {
+        display: flex;
+        align-items: center;
+    }
+    .intro{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
