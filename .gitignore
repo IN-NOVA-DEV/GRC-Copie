@@ -1,3 +1,5 @@
 
 *.vsidx
 *.vsidx
+**/bin/*
+**/obj/*
