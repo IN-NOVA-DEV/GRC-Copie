@@ -2,11 +2,11 @@
 
 namespace grc_copie.Controllers.Api
 {
-    public class PersonController : Controller
+    public class ApiPersonController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
     }
 }
