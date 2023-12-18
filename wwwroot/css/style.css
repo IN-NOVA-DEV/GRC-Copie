@@ -113,6 +113,7 @@
     grid-area: Content;
     padding: 15px 45px;
     gap: 20px;
+    height: 100%;
 }
 
     .Content .Title {
@@ -282,4 +283,11 @@ margin: 5px 0;
         display: flex;
         flex-direction: row;
         gap: 10px;
+    }
+    .TaskContent{
+        padding: 30px 40px;
+    }
+    .TaskContent .title{
+        margin: 10px 0;
+        font-size: 26px;
     }
