@@ -3,7 +3,7 @@
 }
 
 <div class="TaskContent">
-    <div class="title">Voici ce qui s'est passée dans GRC ces derniers temps</div>
+    <div class="title">Voici ce qui s'est passé dans GRC ces derniers temps</div>
     <div class="Devexpress">
         @(Html.DevExtreme().DataGrid<grc_copie.Models.Person>()
     .DataSource(ds => ds.Mvc()
@@ -22,7 +22,7 @@
 
         columns.AddFor(m => m.CreatedBy).Caption("Par");
 
-        columns.AddFor(m => m.UpdateAt).Caption("Modifiée le");
+        columns.AddFor(m => m.UpdateAt).Caption("Modifiée le").SortOrder(SortOrder.Desc);
 
         columns.AddFor(m => m.UpdateBy).Caption("Par");
 
