@@ -30,24 +30,32 @@
         }
     </div>
     <div class="LoggedUser">
-        <div class="icon">
-            <img src="/img/user.png" alt="user_photo">
-        </div>
-        <div class="Text">
-            @username
-            <svg id="chevr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 9L12 15L18 9" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        <div class="selectMenu" id="usernameElement">
+            <div class="icon">
+                <img src="/img/user.png" alt="user_photo">
+            </div>
+            <div class="Text">
+                @username
+                <svg id="chevr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 9L12 15L18 9" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            </div>
         </div>
         <div class="dropdownMenu">
-            <div class="option">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24"
-                     height="24" viewBox="0 0 24 24" fill="none">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M10.9965 4.00001C11.4368 3.99846 11.8263 4.28508 11.9558 4.70591L15.1231 14.9997L18.0715 7.62861C18.1964 7.31651 18.4697 7.08801 18.7989 7.02042C19.1282 6.95284 19.4694 7.0552 19.7071 7.29289L22.7071 10.2929C23.0976 10.6834 23.0976 11.3166 22.7071 11.7071C22.3166 12.0976 21.6834 12.0976 21.2929 11.7071L19.3652 9.77946L15.9285 18.3714C15.771 18.765 15.3826 19.0165 14.959 18.9992C14.5355 18.9818 14.1689 18.6992 14.0442 18.2941L11.0121 8.43973L8.95782 15.2873C8.84938 15.6488 8.54667 15.9185 8.17511 15.9845C7.80355 16.0506 7.42643 15.9019 7.2 15.6L5 12.6667L2.8 15.6C2.46863 16.0418 1.84183 16.1314 1.4 15.8C0.958169 15.4686 0.868626 14.8418 1.2 14.4L4.2 10.4C4.38885 10.1482 4.68524 10 5 10C5.31475 10 5.61114 10.1482 5.8 10.4L7.6114 12.8152L10.0422 4.71265C10.1687 4.29092 10.5562 4.00156 10.9965 4.00001Z"
-                          fill="#595959" />
+            <a class="option" asp-controller="Activity" asp-action="UserActivity">
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_119_2)">
+                        <path d="M21.0938 19.4063H21.0756C20.8954 19.4021 20.7212 19.3405 20.5785 19.2304C20.4358 19.1202 20.3321 18.9673 20.2825 18.794L17.61 9.44157L15.9777 13.7959C15.9174 13.9568 15.8094 14.0954 15.6682 14.1933C15.527 14.2912 15.3593 14.3437 15.1875 14.3438H11.8125V12.6563H14.6024L16.9286 6.45377C16.991 6.28756 17.1043 6.14527 17.2522 6.04713C17.4002 5.94899 17.5753 5.89999 17.7527 5.90711C17.9301 5.91423 18.1007 5.97711 18.2404 6.08679C18.38 6.19648 18.4814 6.34739 18.5304 6.51807L21.1555 15.7083L22.825 10.7018C22.8808 10.5338 22.9882 10.3877 23.1318 10.2841C23.2754 10.1806 23.448 10.1249 23.625 10.125H27V11.8125H24.2331L21.8938 18.8295C21.838 18.9975 21.7306 19.1437 21.587 19.2472C21.4434 19.3507 21.2708 19.4064 21.0938 19.4063Z" fill="#595959" />
+                        <path d="M12.6562 25.3125H10.9688V19.4062C10.968 18.7351 10.7011 18.0917 10.2266 17.6172C9.75201 17.1427 9.1086 16.8757 8.4375 16.875H5.0625C4.3914 16.8757 3.74799 17.1427 3.27345 17.6172C2.79891 18.0917 2.53199 18.7351 2.53125 19.4062V25.3125H0.84375V19.4062C0.845067 18.2878 1.28996 17.2155 2.08085 16.4246C2.87173 15.6337 3.94402 15.1888 5.0625 15.1875H8.4375C9.55598 15.1888 10.6283 15.6337 11.4192 16.4246C12.21 17.2155 12.6549 18.2878 12.6562 19.4062V25.3125Z" fill="#595959" />
+                        <path d="M6.75 6.75C7.25064 6.75 7.74003 6.89846 8.15629 7.17659C8.57255 7.45473 8.89699 7.85006 9.08857 8.31258C9.28016 8.77511 9.33028 9.28406 9.23261 9.77507C9.13495 10.2661 8.89387 10.7171 8.53987 11.0711C8.18586 11.4251 7.73484 11.6662 7.24382 11.7639C6.75281 11.8615 6.24386 11.8114 5.78133 11.6198C5.31881 11.4282 4.92348 11.1038 4.64534 10.6875C4.36721 10.2713 4.21875 9.78188 4.21875 9.28125C4.21875 8.60992 4.48544 7.96609 4.96014 7.49139C5.43484 7.01668 6.07867 6.75 6.75 6.75ZM6.75 5.0625C5.91561 5.0625 5.09996 5.30993 4.40619 5.77349C3.71242 6.23705 3.17169 6.89593 2.85239 7.6668C2.53308 8.43768 2.44953 9.28593 2.61231 10.1043C2.7751 10.9226 3.17689 11.6744 3.7669 12.2644C4.3569 12.8544 5.10861 13.2562 5.92696 13.4189C6.74532 13.5817 7.59357 13.4982 8.36445 13.1789C9.13532 12.8596 9.7942 12.3188 10.2578 11.6251C10.7213 10.9313 10.9688 10.1156 10.9688 9.28125C10.9688 8.16237 10.5243 7.08931 9.73311 6.29814C8.94194 5.50697 7.86888 5.0625 6.75 5.0625Z" fill="#595959" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_119_2">
+                            <rect width="27" height="27" fill="white" />
+                        </clipPath>
+                    </defs>
                 </svg>
-                <span>Actvité</span>
-            </div>
-            <div class="option">
+                <span>Activité</span>
+            </a>
+            <a class="option">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24"
                      height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M19.9994 19.2611H10.9294C10.4794 19.2611 10.1094 18.8911 10.1094 18.4411C10.1094 17.9911 10.4794 17.6211 10.9294 17.6211H19.9994C20.4494 17.6211 20.8194 17.9911 20.8194 18.4411C20.8194 18.9011 20.4494 19.2611 19.9994 19.2611Z"
@@ -64,33 +72,36 @@
                           fill="#595959" />
                 </svg>
                 <span>Tâches</span>
-            </div>
+            </a>
         </div>
     </div>
 </div>
 <script>
     // Script d'affichage pour menu deroulant du topbar
-    document.addEventListener("DOMContentLoaded", function () {
-        var dropdown = document.querySelector('.dropdownMenu');
-        var toggleButton = document.querySelector('.LoggedUser');
-        var loggedUser = document.getElementById('loggedUser');
-        var chevron = document.getElementById('chevr');
-        // Affiche ou cache le menu déroulant en cliquant sur le bouton
-        toggleButton.addEventListener('click', function (event) {
-            event.stopPropagation(); // Empêche la propagation du clic pour éviter la fermeture immédiate
-            dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'block' : 'none';
-            chevron.classList.toggle('rotate')
-            chevron.classList.remove('rotate0');
+    document.addEventListener('DOMContentLoaded', function () {
+        const usernameElement = document.getElementById('usernameElement');
+        const dropdownMenu = document.querySelector('.dropdownMenu');
+        const chevron = document.getElementById('chevr');
+
+        // Function to toggle the dropdown menu
+        function toggleDropdown() {
+            dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
+            // Add your rotation animation logic for the chevron here
+            chevron.style.transform = (dropdownMenu.style.display === 'block') ? 'rotate(180deg)' : 'rotate(0deg)';
+            chevron.style.transition = 'transform 0.3s ease'
+        }
+
+        // Event listener for clicks on the username element
+        usernameElement.addEventListener('click', function (event) {
+            event.stopPropagation(); // Prevents the click event from reaching the document click handler
+            toggleDropdown();
         });
 
-        // Ferme le menu déroulant si l'utilisateur clique à l'extérieur de celui-ci
-        document.addEventListener('click', function (event) {
-            var isClickInside = dropdown.contains(event.target) || toggleButton.contains(event.target);
-            if (!isClickInside) {
-                dropdown.style.display = 'none';
-                chevron.classList.add('rotate0');
-                chevron.classList.remove('rotate');
-            }
+        // Event listener for clicks outside the dropdown menu
+        document.addEventListener('click', function () {
+            dropdownMenu.style.display = 'none';
+            // Reset chevron rotation when the menu is hidden
+            chevron.style.transform = 'rotate(0deg)';
         });
     });
 </script>

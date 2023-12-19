@@ -1,5 +1,4 @@
-﻿
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
 
 * {
     padding: 0;
@@ -10,7 +9,7 @@
     list-style: none;
 }
 
-.container{
+.container {
     display: grid;
     grid-template-columns: 0.2fr 1.5fr;
     grid-template-rows: 0.2fr 2.8fr;
@@ -33,47 +32,47 @@
     width: 16vw;
 }
 
-    .Sidebar .menu {
-        flex: 1;
-        padding-top: 15px;
-    }
+.Sidebar .menu {
+    flex: 1;
+    padding-top: 15px;
+}
 
-    .Sidebar .ligne {
-        width: 90%;
-        height: 3px;
-        background-color: #ffffff94;
-        position: relative;
-    }
+.Sidebar .ligne {
+    width: 90%;
+    height: 3px;
+    background-color: #ffffff94;
+    position: relative;
+}
 
-    .Sidebar .ligne span {
-        position: absolute;
-        top: -50%;
-        left: 80%;
-        transform: translate(-50%, -50%);
-        background: #007BD4;
-        padding: 5px;
-        color: #fff;
-    }
+.Sidebar .ligne span {
+    position: absolute;
+    top: -50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background: #007BD4;
+    padding: 5px;
+    color: #fff;
+}
 
-    .Sidebar .menu .option a {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 8px;
-        margin: 10px 5px;
-        color: #fff;
-        border-radius: 5px;
-    }
+.Sidebar .menu .option a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    margin: 10px 5px;
+    color: #fff;
+    border-radius: 5px;
+}
 
-        .Sidebar .menu .option a:hover {
-            background-color: #fff;
-            transition: all 0.4s;
-            color: #000000b0;
-        }
+.Sidebar .menu .option a:hover {
+    background-color: #fff;
+    transition: all 0.4s;
+    color: #000000b0;
+}
 
-            .Sidebar .menu .option a:hover svg path {
-                fill: #000000b0;
-            }
+.Sidebar .menu .option a:hover svg path {
+    fill: #000000b0;
+}
 
 .Topbar {
     grid-area: Topbar;
@@ -81,55 +80,57 @@
     display: flex;
     align-items: center;
     padding: 0 45px;
+    color: #696969;
 }
 
-    .Topbar .currentRule {
-        flex: 1;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 5px;  
-    }
+.Topbar .currentRule {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
 
-    .Topbar .LoggedUser {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        flex-direction: row;
-        gap: 5px;
-        position: relative;
-        cursor: pointer;
-    }
-        .Topbar .LoggedUser .dropdownMenu {
-            position: absolute;
-            top: 40px;
-            right: 5px;
-            border-radius: 5px;
-            background: #f5f5f5;
-            z-index: 2;
-            display: none;
-            box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.25);
-            padding: 4px;
-        }
+.Topbar .LoggedUser {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: row;
+    gap: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.Topbar .LoggedUser .dropdownMenu {
+    position: absolute;
+    top: 40px;
+    right: 5px;
+    border-radius: 5px;
+    background: #f5f5f5;
+    z-index: 2;
+    display: none;
+    box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    padding: 4px;
+}
 
 .LoggedUser .Text {
     display: flex;
     gap: 3px;
 }
 
-    .LoggedUser .Text svg {
-        width: 20px;
-    }
-
-.rotate {
-    transform: rotate(180deg); /* Vous pouvez ajuster l'angle de rotation selon vos besoins */
-    transition: transform 0.3s ease; /* Ajoute une transition pour une animation fluide */
+.LoggedUser #usernameElement {
+    display: flex;
+    align-items: center;
+    gap: 7px;
 }
 
-.rotate0 {
-    transform: rotate(0deg); /* Vous pouvez ajuster l'angle de rotation selon vos besoins */
-    transition: transform 0.3s ease; /* Ajoute une transition pour une animation fluide */
+.LoggedUser .Text svg {
+    width: 20px;
+}
+
+.LoggedUser .dropdownMenu a {
+    color: #000000b0;
 }
 
 .Topbar .LoggedUser .dropdownMenu .option {
@@ -141,14 +142,14 @@
     border-radius: 5px;
 }
 
-    .Topbar .LoggedUser .dropdownMenu .option:hover {
-        background-color: #f2cd00;
-        color: #FFFFFF;
-    }
+.Topbar .LoggedUser .dropdownMenu .option:hover {
+    background-color: #f2cd00;
+    color: #FFFFFF;
+}
 
-        .Topbar .LoggedUser .dropdownMenu .option:hover svg path {
-            fill: #FFFFFF;
-        }
+.Topbar .LoggedUser .dropdownMenu .option:hover svg path {
+    fill: #FFFFFF;
+}
 
 .Content {
     display: grid;
@@ -166,16 +167,16 @@
     height: 100%;
 }
 
-    .Content .Title {
-        display: flex;
-        align-items: center;
-    }
+.Content .Title {
+    display: flex;
+    align-items: center;
+}
 
-        .Content .Title .textTitle {
-            /* flex: 1; */
-            font-size: 25px;
-            font-weight: bold;
-        }
+.Content .Title .textTitle {
+    /* flex: 1; */
+    font-size: 25px;
+    font-weight: bold;
+}
 
 .Title .textTitle {
     color: #000000B2;
@@ -189,10 +190,10 @@
     transition: all 0.4s;
 }
 
-    .add-btn a:hover {
-        transform: scale(1.05);
-        transition: all 0.4s;
-    }
+.add-btn a:hover {
+    transform: scale(1.05);
+    transition: all 0.4s;
+}
 
 .Content .Title .add-btn {
     flex: 1;
@@ -210,15 +211,15 @@
     width: 250px;
 }
 
-    .Content .Filter .header {
-        display: flex;
-        align-items: center;
-    }
+.Content .Filter .header {
+    display: flex;
+    align-items: center;
+}
 
-    .Content .Filter .text {
-        flex: 1;
-        font-size: 19px;
-    }
+.Content .Filter .text {
+    flex: 1;
+    font-size: 19px;
+}
 
 .Filter .midle {
     flex: 1;
@@ -230,21 +231,21 @@
     text-align: center;
 }
 
-    .Filter .footer button {
-        padding: 10px;
-        background-color: #007BD4;
-        border: none;
-        color: #fff;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 15px;
-        width: 100%;
-    }
+.Filter .footer button {
+    padding: 10px;
+    background-color: #007BD4;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    width: 100%;
+}
 
-        .Filter .footer button:hover {
-            transform: scale(1.01);
-            transition: all 0.4s;
-        }
+.Filter .footer button:hover {
+    transform: scale(1.01);
+    transition: all 0.4s;
+}
 
 .Content .Filter .ligne {
     height: 3px;
@@ -275,28 +276,33 @@
     height: 100%;
     padding: 0 140px;
 }
-.home .welcome{
+
+.home .welcome {
     font-size: 40px;
     color: rgb(90, 95, 86);
 }
-    .home .Title {
-        font-size: 30px;
-        font-weight: 500;
-        color: #007bd4;
-        padding: 15px 0;
-    }
-    .home .Title2 {
-        margin-bottom: 10px;
-    }
+
+.home .Title {
+    font-size: 30px;
+    font-weight: 500;
+    color: #007bd4;
+    padding: 15px 0;
+}
+
+.home .Title2 {
+    margin-bottom: 10px;
+}
+
 .cv-management .title,
 .professional-addition .title {
     font-size: 21px;
     padding: 10px;
     background-color: #ebc700;
     color: #ffffffc0;
-border-radius: 5px;
-margin: 5px 0;
+    border-radius: 5px;
+    margin: 5px 0;
 }
+
 .cv-management {
     background-color: #f4f4f4;
     padding: 20px;
@@ -313,31 +319,35 @@ margin: 5px 0;
     box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.25);
 }
 
-    .cv-management ul img,
-    .professional-addition ul img {
-        height: 28px;
-        margin: 10px;
-    }
+.cv-management ul img,
+.professional-addition ul img {
+    height: 28px;
+    margin: 10px;
+}
 
-    .cv-management ul li,
-    .professional-addition ul li {
-        list-style: none;
-    }
+.cv-management ul li,
+.professional-addition ul li {
+    list-style: none;
+}
 
-    .cv-management ul .list,
-    .professional-addition ul .list {
-        display: flex;
-        align-items: center;
-    }
-    .intro{
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-    }
-    .TaskContent{
-        padding: 30px 40px;
-    }
-    .TaskContent .title{
-        margin: 15px 0;
-        font-size: 26px;
-    }
+.cv-management ul .list,
+.professional-addition ul .list {
+    display: flex;
+    align-items: center;
+}
+
+.intro {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.TaskContent {
+    padding: 30px 40px;
+}
+
+.TaskContent .title {
+    margin: 15px 0;
+    font-size: 26px;
+    color: #696969;
+}
