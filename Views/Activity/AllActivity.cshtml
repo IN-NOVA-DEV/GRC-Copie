@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "List Activity";
+}
+
+<div class="TaskContent">
+    <div class="title">Voici ce qui s'est passée dans GRC ces derniers temps</div>
+    <div class="Devexpress">
+        @(Html.DevExtreme().DataGrid<grc_copie.Models.Person>()
+    .DataSource(ds => ds.Mvc()
+        .Controller("ApiPerson")
+        .LoadAction("Get")
+        .Key("PersonId")
+    )
+    .RemoteOperations(true)
+    .Columns(columns => {
+
+        columns.AddFor(m => m.LastName).Caption("Nom");
+
+        columns.AddFor(m => m.FirstName).Caption("Prénom");
+
+        columns.AddFor(m => m.CreatedAt).Caption("Crée le");
+
+        columns.AddFor(m => m.CreatedBy).Caption("Par");
+
+        columns.AddFor(m => m.UpdateAt).Caption("Modifiée le");
+
+        columns.AddFor(m => m.UpdateBy).Caption("Par");
+
+        columns.AddFor(m => m.PendAcceptedBy).Caption("Acceptée par");
+    })
+)
+    </div>
+</div>
