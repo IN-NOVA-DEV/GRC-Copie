@@ -1,5 +1,5 @@
 ﻿
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300&family=Open+Sans&family=Rubik&family=Russo+One&family=Titan+One&family=Ubuntu&family=Work+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
 
 * {
     padding: 0;
@@ -45,15 +45,15 @@
         position: relative;
     }
 
-        .Sidebar .ligne span {
-            position: absolute;
-            top: -50%;
-            left: 80%;
-            transform: translate(-50%, -50%);
-            background: #007BD4;
-            padding: 5px;
-            color: #fff;
-        }
+    .Sidebar .ligne span {
+        position: absolute;
+        top: -50%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        background: #007BD4;
+        padding: 5px;
+        color: #fff;
+    }
 
     .Sidebar .menu .option a {
         display: flex;
@@ -88,17 +88,67 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        gap: 5px;
+        gap: 5px;  
     }
 
     .Topbar .LoggedUser {
         flex: 1;
         display: flex;
         align-items: center;
-        flex-direction: row-reverse;
+        justify-content: end;
+        flex-direction: row;
         gap: 5px;
+        position: relative;
+        cursor: pointer;
+    }
+        .Topbar .LoggedUser .dropdownMenu {
+            position: absolute;
+            top: 40px;
+            right: 5px;
+            border-radius: 5px;
+            background: #f5f5f5;
+            z-index: 2;
+            display: none;
+            box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.25);
+            padding: 4px;
+        }
+
+.LoggedUser .Text {
+    display: flex;
+    gap: 3px;
+}
+
+    .LoggedUser .Text svg {
+        width: 20px;
     }
 
+.rotate {
+    transform: rotate(180deg); /* Vous pouvez ajuster l'angle de rotation selon vos besoins */
+    transition: transform 0.3s ease; /* Ajoute une transition pour une animation fluide */
+}
+
+.rotate0 {
+    transform: rotate(0deg); /* Vous pouvez ajuster l'angle de rotation selon vos besoins */
+    transition: transform 0.3s ease; /* Ajoute une transition pour une animation fluide */
+}
+
+.Topbar .LoggedUser .dropdownMenu .option {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+    .Topbar .LoggedUser .dropdownMenu .option:hover {
+        background-color: #f2cd00;
+        color: #FFFFFF;
+    }
+
+        .Topbar .LoggedUser .dropdownMenu .option:hover svg path {
+            fill: #FFFFFF;
+        }
 
 .Content {
     display: grid;
@@ -288,6 +338,6 @@ margin: 5px 0;
         padding: 30px 40px;
     }
     .TaskContent .title{
-        margin: 10px 0;
+        margin: 15px 0;
         font-size: 26px;
     }

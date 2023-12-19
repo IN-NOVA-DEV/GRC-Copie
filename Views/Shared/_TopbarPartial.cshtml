@@ -2,7 +2,7 @@
 @using GRC_Copie.Controllers;
 @using Microsoft.AspNetCore.Http;
 @inject IHttpContextAccessor HttpContextAccessor;
-@{ 
+@{
     string username = HttpContextAccessor.HttpContext.Session.GetString("username");
 }
 
@@ -35,6 +35,62 @@
         </div>
         <div class="Text">
             @username
+            <svg id="chevr" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 9L12 15L18 9" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+        </div>
+        <div class="dropdownMenu">
+            <div class="option">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                     height="24" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M10.9965 4.00001C11.4368 3.99846 11.8263 4.28508 11.9558 4.70591L15.1231 14.9997L18.0715 7.62861C18.1964 7.31651 18.4697 7.08801 18.7989 7.02042C19.1282 6.95284 19.4694 7.0552 19.7071 7.29289L22.7071 10.2929C23.0976 10.6834 23.0976 11.3166 22.7071 11.7071C22.3166 12.0976 21.6834 12.0976 21.2929 11.7071L19.3652 9.77946L15.9285 18.3714C15.771 18.765 15.3826 19.0165 14.959 18.9992C14.5355 18.9818 14.1689 18.6992 14.0442 18.2941L11.0121 8.43973L8.95782 15.2873C8.84938 15.6488 8.54667 15.9185 8.17511 15.9845C7.80355 16.0506 7.42643 15.9019 7.2 15.6L5 12.6667L2.8 15.6C2.46863 16.0418 1.84183 16.1314 1.4 15.8C0.958169 15.4686 0.868626 14.8418 1.2 14.4L4.2 10.4C4.38885 10.1482 4.68524 10 5 10C5.31475 10 5.61114 10.1482 5.8 10.4L7.6114 12.8152L10.0422 4.71265C10.1687 4.29092 10.5562 4.00156 10.9965 4.00001Z"
+                          fill="#595959" />
+                </svg>
+                <span>Actvité</span>
+            </div>
+            <div class="option">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                     height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M19.9994 19.2611H10.9294C10.4794 19.2611 10.1094 18.8911 10.1094 18.4411C10.1094 17.9911 10.4794 17.6211 10.9294 17.6211H19.9994C20.4494 17.6211 20.8194 17.9911 20.8194 18.4411C20.8194 18.9011 20.4494 19.2611 19.9994 19.2611Z"
+                          fill="#595959" />
+                    <path d="M19.9994 12.9681H10.9294C10.4794 12.9681 10.1094 12.5981 10.1094 12.1481C10.1094 11.6981 10.4794 11.3281 10.9294 11.3281H19.9994C20.4494 11.3281 20.8194 11.6981 20.8194 12.1481C20.8194 12.5981 20.4494 12.9681 19.9994 12.9681Z"
+                          fill="#595959" />
+                    <path d="M19.9994 6.67125H10.9294C10.4794 6.67125 10.1094 6.30125 10.1094 5.85125C10.1094 5.40125 10.4794 5.03125 10.9294 5.03125H19.9994C20.4494 5.03125 20.8194 5.40125 20.8194 5.85125C20.8194 6.30125 20.4494 6.67125 19.9994 6.67125Z"
+                          fill="#595959" />
+                    <path d="M4.90969 8.03187C4.68969 8.03187 4.47969 7.94187 4.32969 7.79187L3.41969 6.88188C3.09969 6.56188 3.09969 6.04187 3.41969 5.72187C3.73969 5.40187 4.25969 5.40187 4.57969 5.72187L4.90969 6.05188L7.04969 3.91187C7.36969 3.59188 7.88969 3.59188 8.20969 3.91187C8.52969 4.23188 8.52969 4.75188 8.20969 5.07188L5.48969 7.79187C5.32969 7.94187 5.12969 8.03187 4.90969 8.03187Z"
+                          fill="#595959" />
+                    <path d="M4.90969 14.3287C4.69969 14.3287 4.48969 14.2487 4.32969 14.0887L3.41969 13.1788C3.09969 12.8588 3.09969 12.3388 3.41969 12.0188C3.73969 11.6988 4.25969 11.6988 4.57969 12.0188L4.90969 12.3488L7.04969 10.2087C7.36969 9.88876 7.88969 9.88876 8.20969 10.2087C8.52969 10.5288 8.52969 11.0487 8.20969 11.3687L5.48969 14.0887C5.32969 14.2487 5.11969 14.3287 4.90969 14.3287Z"
+                          fill="#595959" />
+                    <path d="M4.90969 20.3288C4.69969 20.3288 4.48969 20.2488 4.32969 20.0888L3.41969 19.1788C3.09969 18.8588 3.09969 18.3388 3.41969 18.0188C3.73969 17.6988 4.25969 17.6988 4.57969 18.0188L4.90969 18.3488L7.04969 16.2087C7.36969 15.8888 7.88969 15.8888 8.20969 16.2087C8.52969 16.5288 8.52969 17.0488 8.20969 17.3688L5.48969 20.0888C5.32969 20.2488 5.11969 20.3288 4.90969 20.3288Z"
+                          fill="#595959" />
+                </svg>
+                <span>Tâches</span>
+            </div>
         </div>
     </div>
 </div>
+<script>
+    // Script d'affichage pour menu deroulant du topbar
+    document.addEventListener("DOMContentLoaded", function () {
+        var dropdown = document.querySelector('.dropdownMenu');
+        var toggleButton = document.querySelector('.LoggedUser');
+        var loggedUser = document.getElementById('loggedUser');
+        var chevron = document.getElementById('chevr');
+        // Affiche ou cache le menu déroulant en cliquant sur le bouton
+        toggleButton.addEventListener('click', function (event) {
+            event.stopPropagation(); // Empêche la propagation du clic pour éviter la fermeture immédiate
+            dropdown.style.display = (dropdown.style.display === 'none' || dropdown.style.display === '') ? 'block' : 'none';
+            chevron.classList.toggle('rotate')
+            chevron.classList.remove('rotate0');
+        });
+
+        // Ferme le menu déroulant si l'utilisateur clique à l'extérieur de celui-ci
+        document.addEventListener('click', function (event) {
+            var isClickInside = dropdown.contains(event.target) || toggleButton.contains(event.target);
+            if (!isClickInside) {
+                dropdown.style.display = 'none';
+                chevron.classList.add('rotate0');
+                chevron.classList.remove('rotate');
+            }
+        });
+    });
+</script>
