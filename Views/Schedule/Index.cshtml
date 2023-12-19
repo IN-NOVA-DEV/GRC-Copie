@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Task List";
+}
+<div class="TaskContent">
+    <div class="title">Liste de tâches des employés</div>
+    <div class="Devexpress">
+        @(Html.DevExtreme().DataGrid<grc_copie.Models.Schedule>()
+
+    .DataSource(ds => ds.Mvc()
+        .Controller("ApiSchedules")
+        .LoadAction("Get")
+        .Key("Id")
+    )
+    .RemoteOperations(true)
+    .Columns(columns => {
+
+        //columns.AddFor(m => m.Id);
+
+        columns.AddFor(m => m.EmailOwner).Caption("Email");
+
+        columns.AddFor(m => m.CreatedDate).Caption("Date de création");
+
+        columns.AddFor(m => m.StartAt).Caption("Heure de début");
+
+        columns.AddFor(m => m.EndAt).Caption("Heure de fin");
+
+        columns.AddFor(m => m.TaskTitle).Caption("Titre");
+    })
+)
+    </div>
+</div>
