@@ -18,11 +18,11 @@
 
         columns.AddFor(m => m.FirstName).Caption("Prénom");
 
-        columns.AddFor(m => m.CreatedAt).Caption("Crée le");
+        columns.AddFor(m => m.CreatedAt).Caption("Crée le").SortOrder(SortOrder.Desc);
 
         columns.AddFor(m => m.CreatedBy).Caption("Par");
 
-        columns.AddFor(m => m.UpdateAt).Caption("Modifiée le").SortOrder(SortOrder.Desc);
+        columns.AddFor(m => m.UpdateAt).Caption("Modifiée le");
 
         columns.AddFor(m => m.UpdateBy).Caption("Par");
 
