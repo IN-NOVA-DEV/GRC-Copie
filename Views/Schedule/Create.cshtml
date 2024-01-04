@@ -1,0 +1,38 @@
+﻿@{ 
+    ViewData["Title"] = "Create Task";
+}
+<div class="TaskContent">
+    <div class="title">Création de votre tâche journalière</div>
+    <div class="Devexpress">
+        @(Html.DevExtreme().DataGrid<grc_copie.Models.Schedule>()
+
+    .DataSource(ds => ds.Mvc()
+        .Controller("ApiSchedules")
+        .LoadAction("Get")
+        .InsertAction("Post")
+        .DeleteAction("Delete")
+        .Key("Id")
+    )
+    .Editing(e => e
+        .AllowAdding(true)
+        .AllowDeleting(true)
+        .UseIcons(true)
+    )
+    .RemoteOperations(true)
+    .Columns(columns => {
+
+        //columns.AddFor(m => m.Id);
+        columns.AddFor(m => m.TaskTitle).Caption("Titre");
+
+        columns.AddFor(m => m.EmailOwner).Caption("Email").Visible(false);
+
+        columns.AddFor(m => m.CreatedDate).Caption("Date de création").SortOrder(SortOrder.Desc);
+
+        columns.AddFor(m => m.StartAt).Caption("Heure de début").Format("HH:mm").EditorOptions(new { type = "datetime", displayFormat = "HH:mm", calendarOptions = new { visible = false } }).Width(130);
+
+        columns.AddFor(m => m.EndAt).Caption("Heure de fin").Format("HH:mm").EditorOptions(new { type = "datetime", displayFormat = "HH:mm", calendarOptions = new { visible = false } }).Width(130);
+
+    })
+)
+    </div>
+</div>
