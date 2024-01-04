@@ -113,7 +113,12 @@
     box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.25);
     padding: 4px;
 }
-
+.dropdownMenu .ligne {
+    height: 1px;
+    width: 100%;
+    background-color: #6969693f;
+    margin: 3px 0;
+}
 .LoggedUser .Text {
     display: flex;
     gap: 3px;
@@ -350,4 +355,7 @@
     margin: 15px 0;
     font-size: 26px;
     color: #696969;
+}
+#devextreme0{
+    padding: 10px;
 }
