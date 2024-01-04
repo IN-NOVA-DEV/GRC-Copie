@@ -12,6 +12,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using grc_copie.Data;
 using grc_copie.Models;
+using Microsoft.Identity.Web;
 
 namespace grc_copie.Controllers.Api
 {
@@ -46,18 +47,41 @@ namespace grc_copie.Controllers.Api
 
             return Json(await DataSourceLoader.LoadAsync(schedules, loadOptions));
         }
+        [HttpGet]
+        public async Task<IActionResult> GetByLogged(DataSourceLoadOptions loadOptions)
+        {
+            var username = HttpContext.User.GetDisplayName();
+            var schedules = _context.Schedules.Select(i => new
+            {
+                i.Id,
+                i.EmailOwner,
+                i.CreatedDate,
+                i.StartAt,
+                i.EndAt,
+                i.TaskTitle
+            }).Where(i => i.EmailOwner == username);
 
+            // If underlying data is a large SQL table, specify PrimaryKey and PaginateViaPrimaryKey.
+            // This can make SQL execution plans more efficient.
+            // For more detailed information, please refer to this discussion: https://github.com/DevExpress/DevExtreme.AspNet.Data/issues/336.
+            // loadOptions.PrimaryKey = new[] { "Id" };
+            // loadOptions.PaginateViaPrimaryKey = true;
+
+            return Json(await DataSourceLoader.LoadAsync(schedules, loadOptions));
+        }
         [HttpPost]
         public async Task<IActionResult> Post(string values)
         {
             var model = new Schedule();
             var valuesDict = JsonConvert.DeserializeObject<IDictionary>(values);
+            var username = HttpContext.User.GetDisplayName();
             PopulateModel(model, valuesDict);
 
             if (!TryValidateModel(model))
                 return BadRequest(GetFullErrorMessage(ModelState));
 
             var result = _context.Schedules.Add(model);
+            model.EmailOwner = username;
             await _context.SaveChangesAsync();
 
             return Json(new { result.Entity.Id });

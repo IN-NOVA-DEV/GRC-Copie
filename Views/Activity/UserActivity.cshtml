@@ -1,6 +1,32 @@
 ﻿@{
     ViewData["Title"] = "My Activity";
 }
-<div class="Content">
-    <div>Activitée</div>
+<div class="TaskContent">
+    <div class="title">Ce que vous avez fait ces derniers temps</div>
+    <div class="Devexpress">
+        @(Html.DevExtreme().DataGrid<grc_copie.Models.Person>()
+    .DataSource(ds => ds.Mvc()
+        .Controller("ApiPerson")
+        .LoadAction("GetByLogged")
+        .Key("PersonId")
+    )
+    .RemoteOperations(true)
+    .Columns(columns => {
+
+        columns.AddFor(m => m.LastName).Caption("Nom");
+
+        columns.AddFor(m => m.FirstName).Caption("Prénom");
+
+        columns.AddFor(m => m.CreatedAt).Caption("Crée le").SortOrder(SortOrder.Desc);
+
+        columns.AddFor(m => m.CreatedBy).Caption("Par");
+
+        columns.AddFor(m => m.UpdateAt).Caption("Modifiée le");
+
+        columns.AddFor(m => m.UpdateBy).Caption("Par");
+
+        columns.AddFor(m => m.PendAcceptedBy).Caption("Acceptée par");
+    })
+)
+    </div>
 </div>
